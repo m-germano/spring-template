@@ -1,0 +1,58 @@
+@baseUrl = http://localhost:8080
+@id = 1
+
+############################################################
+# GET - Listar todos
+############################################################
+
+GET {{baseUrl}}/recurso
+Accept: application/json
+
+
+############################################################
+# GET - Buscar por ID
+############################################################
+
+GET {{baseUrl}}/recurso/{{id}}
+Accept: application/json
+
+
+############################################################
+# GET - Busca com parâmetros
+############################################################
+
+GET {{baseUrl}}/recurso/busca?parametro1=valor1&parametro2=valor2
+Accept: application/json
+
+
+############################################################
+# POST - Cadastrar
+############################################################
+
+POST {{baseUrl}}/recurso
+Content-Type: application/json
+
+{
+  "campo1": "valor",
+  "campo2": 123
+}
+
+
+############################################################
+# PUT - Alterar
+############################################################
+
+PUT {{baseUrl}}/recurso/{{id}}
+Content-Type: application/json
+
+{
+  "campo1": "novo valor",
+  "campo2": 456
+}
+
+
+############################################################
+# DELETE - Excluir
+############################################################
+
+DELETE {{baseUrl}}/recurso/{{id}}
