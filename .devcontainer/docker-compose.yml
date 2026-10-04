@@ -43,3 +43,4 @@ services:
       - postgres-data:/var/lib/postgresql/data
       - ./postgres/init.sql:/docker-entrypoint-initdb.d/01-init.sql:ro
       - ./postgres/base.sql:/docker-entrypoint-initdb.d/02-base.sql:ro
+      - ./postgres/prova.sql:/docker-entrypoint-initdb.d/03-prova.sql:ro
